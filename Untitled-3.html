@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation 3D : Petra Frisgiata I</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            text-align: justify;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+        
+        .sketchfab-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .sketchfab-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .language-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-indicator" id="language-indicator"></div>
+    
+    <div class="container">
+        <h1 id="titre"></h1>
+        <p id="description"></p>
+        <a id="lien-sketchfab" class="sketchfab-link" href="https://sketchfab.com/3d-models/documentation-3d-petra-frisgiata-i-14a00e7d8f024f91be1aa53301f692c8" target="_blank"></a>
+    </div>
+
+    <script>
+        // Traductions améliorées
+        const traductions = {
+            fr: {
+                titre: "Documentation 3D : Petra Frisgiata I",
+                description: "L'étude de l'art rupestre, historiquement basée sur des relevés manuels et des calques, intègre désormais la photogrammétrie et la modélisation tridimensionnelle. Ces méthodes numériques garantissent une reconstitution géométriquement fidèle des gravures et autorisent l'extraction de paramètres métriques précis (profondeur, séquençage stratigraphique par superposition, distribution spatiale). La confrontation systématique des modèles 3D aux relevés antérieurs met en évidence les variations interprétatives et révèle parfois des détails jusqu'alors inapparents. Par ailleurs, la standardisation de la documentation numérique facilite les analyses comparatives et assure la conservation pérenne des données. Cette démarche s'inscrit dans une réflexion plus large sur l'évolution des méthodes en archéologie et sur les apports du numérique pour revisiter des corpus anciens afin de tenter de mieux comprendre les dynamiques symboliques régionales, et favoriser la transmission des savoirs vers un public plus large.",
+                lienSketchfab: "Voir le modèle 3D sur Sketchfab"
+            },
+            en: {
+                titre: "3D Documentation: Petra Frisgiata I",
+                description: "The study of rock art, historically based on manual surveys and tracings, now incorporates photogrammetry and three-dimensional modeling. These digital methods ensure a geometrically accurate reconstruction of engravings and allow the extraction of precise metric parameters (depth, stratigraphic sequencing by superposition, spatial distribution). Systematic comparison of 3D models with previous surveys highlights interpretative variations and sometimes reveals previously unnoticed details. Moreover, the standardization of digital documentation facilitates comparative analyses and ensures the long-term preservation of data. This approach is part of a broader reflection on the evolution of archaeological methods and the contributions of digital technology to revisit old corpora, in order to better understand regional symbolic dynamics and promote knowledge transfer to a wider audience.",
+                lienSketchfab: "View 3D model on Sketchfab"
+            },
+            es: {
+                titre: "Documentación 3D: Petra Frisgiata I",
+                description: "El estudio del arte rupestre, históricamente basado en levantamientos manuales y calcos, ahora incorpora la fotogrametría y la modelización tridimensional. Estos métodos digitales garantizan una reconstrucción geométricamente fiel de los grabados y permiten la extracción de parámetros métricos precisos (profundidad, secuenciación estratigráfica por superposición, distribución espacial). La comparación sistemática de los modelos 3D con los levantamientos anteriores pone de manifiesto las variaciones interpretativas y a veces revela detalles hasta entonces inadvertidos. Además, la estandarización de la documentación digital facilita los análisis comparativos y asegura la conservación duradera de los datos. Este enfoque forma parte de una reflexión más amplia sobre la evolución de los métodos en arqueología y sobre las aportaciones de lo digital para revisar antiguos corpus, con el fin de comprender mejor las dinámicas simbólicas regionales y favorecer la transmisión del conocimiento a un público más amplio.",
+                lienSketchfab: "Ver modelo 3D en Sketchfab"
+            },
+            de: {
+                titre: "3D-Dokumentation: Petra Frisgiata I",
+                description: "Die Untersuchung von Felskunst, historisch basierend auf manuellen Vermessungen und Pausen, integriert nun Photogrammetrie und dreidimensionale Modellierung. Diese digitalen Methoden gewährleisten eine geometrisch getreue Rekonstruktion der Gravuren und ermöglichen die Extraktion präziser metrischer Parameter (Tiefe, stratigraphische Sequenzierung durch Überlagerung, räumliche Verteilung). Der systematische Vergleich von 3D-Modellen mit früheren Vermessungen hebt interpretative Variationen hervor und enthüllt manchmal bisher unbemerkte Details. Darüber hinaus erleichtert die Standardisierung der digitalen Dokumentation vergleichende Analysen und gewährleistet die dauerhafte Erhaltung der Daten. Dieser Ansatz ist Teil einer breiteren Reflexion über die Entwicklung archäologischer Methoden und die Beiträge der Digitaltechnik zur Überarbeitung alter Korpora, um regionale symbolische Dynamiken besser zu verstehen und den Wissenstransfer zu einem breiteren Publikum zu fördern.",
+                lienSketchfab: "3D-Modell auf Sketchfab ansehen"
+            },
+            it: {
+                titre: "Documentazione 3D: Petra Frisgiata I",
+                description: "Lo studio dell'arte rupestre, storicamente basato su rilievi manuali e lucidi, ora incorpora la fotogrammetria e la modellazione tridimensionale. Questi metodi digitali garantiscono una ricostruzione geometricamente fedele delle incisioni e consentono l'estrazione di parametri metrici precisi (profondità, sequenziamento stratigrafico per sovrapposizione, distribuzione spaziale). Il confronto sistematico dei modelli 3D con i rilievi precedenti evidenzia le variazioni interpretative e talvolta rivela dettagli fino ad allora inosservati. Inoltre, la standardizzazione della documentazione digitale facilita le analisi comparative e assicura la conservazione duratura dei dati. Questo approccio si inserisce in una riflessione più ampia sull'evoluzione dei metodi in archeologia e sui contributi del digitale per rivisitare antichi corpus, al fine di comprendere meglio le dinamiche simboliche regionali e favorire la trasmissione delle conoscenze verso un pubblico più ampio.",
+                lienSketchfab: "Visualizza il modello 3D su Sketchfab"
+            }
+        };
+
+        // Fonction de détection de langue améliorée
+        function detecterLangue() {
+            const langueNavigateur = navigator.language || navigator.userLanguage;
+            const codeLangue = langueNavigateur.substring(0, 2).toLowerCase();
+            
+            // Afficher l'indicateur de langue
+            document.getElementById('language-indicator').textContent = `Langue: ${codeLangue.toUpperCase()}`;
+            
+            return codeLangue;
+        }
+
+        // Fonction d'application des traductions
+        function appliquerTraductions() {
+            const langue = detecterLangue();
+            const contenu = traductions[langue] || traductions['en']; // Fallback vers anglais
+            
+            // Mettre à jour l'attribut lang de la page
+            document.documentElement.lang = langue;
+            
+            // Mettre à jour le titre de la page
+            document.title = contenu.titre;
+            
+            // Affichage du contenu
+            document.getElementById('titre').textContent = contenu.titre;
+            document.getElementById('description').textContent = contenu.description;
+            document.getElementById('lien-sketchfab').textContent = contenu.lienSketchfab;
+            
+            // Log pour debug
+            console.log(`Langue détectée: ${langue}`);
+            console.log(`Contenu appliqué:`, contenu);
+        }
+
+        // Initialisation au chargement de la page
+        document.addEventListener('DOMContentLoaded', appliquerTraductions);
+
+        // Optionnel: Réagir aux changements de langue du navigateur
+        window.addEventListener('languagechange', appliquerTraductions);
+    </script>
+</body>
+</html>
